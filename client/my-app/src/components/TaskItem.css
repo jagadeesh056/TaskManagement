@@ -1,0 +1,147 @@
+.task-item {
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.task-item:last-child {
+  border-bottom: none;
+}
+
+.task-item-main {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  padding: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.task-item-main:hover {
+  background-color: #f8fafc;
+}
+
+.task-title {
+  font-weight: 500;
+  color: #2d3748;
+}
+
+.task-due-date {
+  color: #4a5568;
+}
+
+.task-status {
+  font-weight: 500;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  text-align: center;
+  font-size: 0.875rem;
+}
+
+.status-pending {
+  background-color: #edf2f7;
+  color: #4a5568;
+}
+
+.status-in-progress {
+  background-color: #ebf8ff;
+  color: #2b6cb0;
+}
+
+.status-completed {
+  background-color: #f0fff4;
+  color: #2f855a;
+}
+
+.status-cancelled {
+  background-color: #fff5f5;
+  color: #c53030;
+}
+
+.task-actions {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: flex-end;
+}
+
+.btn-edit,
+.btn-delete {
+  padding: 0.25rem 0.5rem;
+  border: none;
+  border-radius: 4px;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.btn-edit {
+  background-color: #ebf8ff;
+  color: #2b6cb0;
+}
+
+.btn-edit:hover {
+  background-color: #bee3f8;
+}
+
+.btn-delete {
+  background-color: #fff5f5;
+  color: #c53030;
+}
+
+.btn-delete:hover {
+  background-color: #fed7d7;
+}
+
+.task-details {
+  background-color: #f8fafc;
+  padding: 1rem;
+  border-top: 1px solid #e2e8f0;
+}
+
+.detail-row {
+  display: flex;
+  margin-bottom: 0.5rem;
+}
+
+.detail-row:last-child {
+  margin-bottom: 0;
+}
+
+.detail-label {
+  font-weight: 500;
+  width: 150px;
+  color: #4a5568;
+}
+
+.detail-value {
+  flex: 1;
+  color: #2d3748;
+}
+
+@media (max-width: 768px) {
+  .task-item-main {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+
+  .task-title {
+    font-size: 1.1rem;
+  }
+
+  .task-due-date,
+  .task-status {
+    font-size: 0.9rem;
+  }
+
+  .task-actions {
+    justify-content: flex-start;
+    margin-top: 0.5rem;
+  }
+
+  .detail-row {
+    flex-direction: column;
+    margin-bottom: 1rem;
+  }
+
+  .detail-label {
+    width: 100%;
+    margin-bottom: 0.25rem;
+  }
+}
