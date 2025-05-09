@@ -12,7 +12,7 @@ function App() {
   const [error, setError] = useState(null)
   const [user, setUser] = useState({ id: "1", name: "Demo User" })
 
-  const url = "http://localhost:5000/api/tasks"
+  const url = "https://taskmanagement-l0wz.onrender.com/api/tasks"
 
   // Fetch all tasks
   const fetchTasks = async () => {
